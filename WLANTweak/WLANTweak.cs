@@ -252,6 +252,15 @@ namespace WLANTweak
             Application.Exit();
         }
 
+        protected override void Dispose(bool isDisposing)
+        {
+            if (isDisposing)
+            {
+                this.notifyIcon.Dispose();
+            }
+            base.Dispose(isDisposing);
+        }
+
     }
 
     static class Program
